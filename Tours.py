@@ -1,4 +1,5 @@
 import streamlit as st
+
 # Título principal
 st.title("Tours guiados por Madrid")
 
@@ -13,6 +14,8 @@ st.write("""
 st.markdown("---")
 # Sección de tours disponibles
 st.header("Nuestros Tours")
+
+opcion = st.selectbox('¿En qué tipo de tour estás interesado?',['Tour histórico', 'Tour gastronómico', 'Tour nocturno'])
 
 # Crear una lista de tours como ejemplo
 tours = {
@@ -44,3 +47,9 @@ for tour, details in tours.items():
     st.write(f"**Hora:** {details['Hora']}")
     st.write(details['Descripción'])
     st.markdown("---")
+    edad = st.slider(
+        m_value = 0
+        max_value =100
+        valor_inicial = 20
+        step = 1
+    )
